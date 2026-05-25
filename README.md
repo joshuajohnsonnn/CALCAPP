@@ -111,7 +111,7 @@ Distributed under the Apache License. See (#LICENSE) for details.
 
 ## Contact
 
-All Rights Reserved under Mr Joshua Johnson (@johnsonjoshua16) <br>
+All Rights Reserved under Mr Joshua Johnson (@joshuajohnsonnn) <br>
 Data Science Trainee and Python Developer.<br>
 London, UK <br>
 Feel free to open an issue or submit a PR if you'd like to contribute or suggest improvements!
