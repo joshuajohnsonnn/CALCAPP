@@ -164,6 +164,10 @@ def open_math_mentor_ai():
     mentor.geometry("400x400")
     mentor.configure(bg="#e3f2fd")
 
+    tk.Label(mentor, text="Calculation:", bg="#e3f2fd").pack(pady=(10, 0))
+    calc_entry = tk.Entry(mentor, width=30)
+    calc_entry.pack(pady=(0, 10))
+
     def show_explanation():
         calc = calc_entry.get().strip().lower()
         explanations = {
