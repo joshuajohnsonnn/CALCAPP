@@ -1,6 +1,6 @@
 # CALCAPP
 
-[![License: Apache](https://img.shields.io/badge/License-Apache-yellow.svg)](LICENSE)  
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-red.svg)](LICENSE) <br>
 [![Status: In Development](https://img.shields.io/badge/status-in--development-orange.svg)]()
 
 **CALCAPP** is your step into a new era of computation—a revolutionary, AI-powered calculator that adapts, learns, and elevates the way you work with numbers. It’s engineered not as just a tool, but as your problem-solving partner.  
