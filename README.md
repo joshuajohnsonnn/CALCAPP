@@ -14,8 +14,7 @@
 - [Features](#features)  
 - [Built With](#built-with)  
 - [Getting Started](#getting-started)  
-  - [Prerequisites](#prerequisites)  
-  - [Installation](#installation)  
+  - [Prerequisites](#prerequisites)    
 - [Usage](#usage)  
 - [Release History](#release-history)  
 - [Contributing](#contributing)  
@@ -46,7 +45,6 @@ Welcome to the dawn of a new era in calculations. CALCAPP is **not just a calcul
 ## Built With
 
 - **Python** – Core computational engine.  
-- **HTML** – Interface elements and UI structure.  
 - (Potentially) **SQL** – For function or usage history storage.  
 
 ---
