@@ -34,5 +34,4 @@ VALUES
 (24, 'degreeconversionCALC', 'yes');
 
 
--- Query to retrieve all data from the CALCAPP table
 SELECT * FROM CALCAPP;
