@@ -77,7 +77,7 @@ python CALCAPP/main.py
 
 ## Contributing
 
-PW is currently under active development — your contributions are welcome! Here’s how you can help:
+CALCAPP is currently under active development — your contributions are welcome! Here’s how you can help:
 
 **1**.Fork the repository <br>
 **2**.Create a feature branch:
@@ -105,7 +105,7 @@ Please include details of your changes and update this README as necessary.
 
 ## License
 
-Distributed under the Apache License. See (#LICENSE) for details.
+Distributed under the Apache License. See #LICENSE for details.
 
 ## Contact
 
