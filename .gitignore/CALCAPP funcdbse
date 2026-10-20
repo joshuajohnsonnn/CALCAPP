@@ -1,4 +1,3 @@
--- Example SQL script to create a table and insert data 
 
 CREATE TABLE CALCAPP (
     CALCID INT PRIMARY KEY,
@@ -35,5 +34,4 @@ VALUES
 (24, 'degreeconversionCALC', 'yes');
 
 
--- Query to retrieve all data from the CALCAPP table
 SELECT * FROM CALCAPP;
