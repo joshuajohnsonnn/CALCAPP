@@ -1,3 +1,6 @@
+## THIS IS NOT WORKING UP TO STANDARD. WORKING ON IT. PLEASE BE PATIENT. ##
+## THANK YOU FOR YOUR UNDERSTANDING. ##
+
 import math
 
 def math_mentor_ai():
@@ -92,6 +95,4 @@ def example_input(calc):
     else:
         print("Sorry, I don't have an example for that calculation.")
     
-
-# Call Math Mentor AI
 math_mentor_ai()

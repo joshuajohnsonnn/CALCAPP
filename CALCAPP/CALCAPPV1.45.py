@@ -8,8 +8,91 @@ from tkinter import messagebox
 
 print("The Order of Operations is addition, subtraction, multiplication, division, modulus, floor division, square root, power, logarithm, sine, cosine, tangent, mean, mode, median and range.")
 print("hyperbolic sine, hyperbolic cosine, hyperbolic tangent, hyperbolic arcsine, hyperbolic arccosine, hyperbolic arctangent, radian conversion and degree conversion.")
-choice = input("Please choose a calculation from the list above: ")
 
+calculation_aliases = {
+    "add": "addition",
+    "subtract": "subtraction",
+    "multiply": "multiplication",
+    "divide": "division",
+    "mod": "modulus",
+    "squareroot": "square root",
+    "sqrt": "square root",
+    "exponentiation": "power",
+    "log": "logarithm",
+    "sin": "sine",
+    "cos": "cosine",
+    "tan": "tangent",
+    "average": "mean",
+    "most frequent": "mode",
+    "middle value": "median",
+    "difference between largest and smallest": "range",
+    "sinh": "hyperbolic sine",
+    "cosh": "hyperbolic cosine",
+    "tanh": "hyperbolic tangent",
+    "arcsinh": "hyperbolic arcsine",
+    "arccosh": "hyperbolic arccosine",
+    "arctanh": "hyperbolic arctangent",
+}
+
+
+def normalize_choice(value):
+    normalized = " ".join(value.strip().lower().split())
+    return calculation_aliases.get(normalized, normalized)
+
+
+choice = normalize_choice(input("Please choose a calculation from the list above: "))
+
+
+def perform_calculation():
+    choice = normalize_choice(calc_var.get()) # type: ignore
+    if choice == "":
+        messagebox.showwarning("No Selection", "Please choose a calculation.")
+        return "error"
+    else :
+        if choice == 'addition':
+            import addCALC as addCALC
+        elif choice == 'subtraction':
+            import subtractCALC as subtractCALC
+        elif choice == 'multiplication':
+            import multiplyCALC as multiplyCALC
+        elif choice == 'division':
+            import divideCALC as divideCALC
+        elif choice == 'modulus':
+            import modulusCALC as modulusCALC
+        elif choice == 'floor division':
+            import floordivisionCALC as floordivisionCALC
+        elif choice == 'square root':
+            import squarerootCALC as squarerootCALC
+        elif choice == 'power':
+            import powerCALC as powerCALC
+        elif choice == 'logarithm':
+            import logarithmCALC as logarithmCALC
+        elif choice == 'sine':
+            import sineCALC as sineCALC
+        elif choice == 'cosine':
+            import cosineCALC as cosineCALC
+        elif choice == 'tangent':
+            import tangentCALC as tangentCALC
+        elif choice == 'mean':
+            import meanCALC as meanCALC
+        elif choice == 'mode':
+            import modeCALC as modeCALC
+        elif choice == 'median':
+            import medianCALC as medianCALC
+        elif choice == 'range':
+            import rangeCALC as rangeCALC
+        elif choice == 'hyperbolic sine':
+            import hyperbolicsineCALC as hyperbolicsineCALC
+        elif choice == 'hyperbolic cosine':
+            import hyperboliccosineCALC as hyperboliccosineCALC
+        elif choice == 'hyperbolic tangent':
+            import hyperbolictangentCALC as hyperbolictangentCALC
+        elif choice == 'hyperbolic arcsine':
+            import hyperbolicarcsineCALC as hyperbolicarcsineCALC
+        elif choice == 'hyperbolic arccosine':
+            import hyperbolicarccosineCALC as hyperbolicarccosineCALC
+        elif choice == 'hyperbolic arctangent':
+            import hyperbolicarctangentCALC as hyperbolicar
 if choice == 'addition' or choice == 'add':
     import addCALC as addCALC
     
@@ -85,9 +168,12 @@ else:
     print("Invalid choice. Please try again.")
 
 
-while choice not in ['addition', 'subtraction', 'multiplication', 'division', 'modulus', 'floor division', 'square root', 'power', 'logarithm', 'sine', 'cosine', 'tangent', 'mean', 'mode', 'median', 'range', 'hyperbolic sine', 'hyperbolic cosine', 'hyperbolic tangent', 'hyperbolic arcsine', 'hyperbolic arccosine', 'radian conversion', 'degree conversion']:
+while choice not in ['addition', 'subtraction', 'multiplication', 'division', 'modulus', 'floor division',
+                     'square root', 'power', 'logarithm', 'sine', 'cosine', 'tangent', 'mean', 'mode', 'median',
+                     'range', 'hyperbolic sine', 'hyperbolic cosine', 'hyperbolic tangent', 'hyperbolic arcsine',
+                     'hyperbolic arccosine', 'hyperbolic arctangent', 'radian conversion', 'degree conversion']:
     print("Invalid choice. Please try again.")
-    choice = input("Please choose a calculation from the list above: ")
+    choice = normalize_choice(input("Please choose a calculation from the list above: "))
     print("Error34: Invalid response 560174081764805634856306450")
 print("Thank you for using CALCAPP!")
 
@@ -95,68 +181,6 @@ print("Make sure to come back next time! Goodbye!")
 print( "((Refer a friend))")
 
 ## Please let us know where improvements can be made. ##
-
-def perform_calculation():
-    choice = calc_var.get() # type: ignore
-    if choice == "":
-        messagebox.showwarning("No Selection", "Please choose a calculation.")
-        return
-    try:
-        if choice == 'addition':
-            import addCALC as addCALC
-        elif choice == 'subtraction':
-            import subtractCALC as subtractCALC
-        elif choice == 'multiplication':
-            import multiplyCALC as multiplyCALC
-        elif choice == 'division':
-            import divideCALC as divideCALC
-        elif choice == 'modulus':
-            import modulusCALC as modulusCALC
-        elif choice == 'floor division':
-            import floordivisionCALC as floordivisionCALC
-        elif choice == 'square root':
-            import squarerootCALC as squarerootCALC
-        elif choice == 'power':
-            import powerCALC as powerCALC
-        elif choice == 'logarithm':
-            import logarithmCALC as logarithmCALC
-        elif choice == 'sine':
-            import sineCALC as sineCALC
-        elif choice == 'cosine':
-            import cosineCALC as cosineCALC
-        elif choice == 'tangent':
-            import tangentCALC as tangentCALC
-        elif choice == 'mean':
-            import meanCALC as meanCALC
-        elif choice == 'mode':
-            import modeCALC as modeCALC
-        elif choice == 'median':
-            import medianCALC as medianCALC
-        elif choice == 'range':
-            import rangeCALC as rangeCALC
-        elif choice == 'hyperbolic sine':
-            import hyperbolicsineCALC as hyperbolicsineCALC
-        elif choice == 'hyperbolic cosine':
-            import hyperboliccosineCALC as hyperboliccosineCALC
-        elif choice == 'hyperbolic tangent':
-            import hyperbolictangentCALC as hyperbolictangentCALC
-        elif choice == 'hyperbolic arcsine':
-            import hyperbolicarcsineCALC as hyperbolicarcsineCALC
-        elif choice == 'hyperbolic arccosine':
-            import hyperbolicarccosineCALC as hyperbolicarccosineCALC
-        elif choice == 'hyperbolic arctangent':
-            import hyperbolicarctangentCALC as hyperbolicarctangentCALC
-        elif choice == 'radian conversion':
-            import radianconversionCALC as radianconversionCALC
-        elif choice == 'degree conversion':
-            import degreeconversionCALC as degreeconversionCALC
-        else:
-            messagebox.showerror("Invalid Choice", "Invalid calculation selected.")
-            return
-        
-        messagebox.showinfo("Success", f"{choice.title()} module imported and executed!")
-    except Exception as e:
-        messagebox.showerror("Error", f"An error occurred: {e}")
 
 def open_math_mentor_ai():
     mentor = tk.Toplevel()
@@ -240,7 +264,7 @@ def open_math_mentor_ai():
             "- Use hyperbolic functions for advanced math.\n"
         )
         messagebox.showinfo("General Math Help", help_text, parent=mentor)
-
+    
 
 
 
