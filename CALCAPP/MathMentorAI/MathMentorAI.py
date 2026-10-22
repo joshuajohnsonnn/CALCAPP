@@ -32,35 +32,67 @@ CALCULATION_ALIASES = {
     "arctanh": "hyperbolic arctangent",
 }
 
+CALCAPP_FUNCTIONS = (
+    "addition",
+    "subtraction",
+    "multiplication",
+    "division",
+    "modulus",
+    "floor division",
+    "square root",
+    "power",
+    "logarithm",
+    "sine",
+    "cosine",
+    "tangent",
+    "mean",
+    "mode",
+    "median",
+    "range",
+    "hyperbolic sine",
+    "hyperbolic cosine",
+    "hyperbolic tangent",
+    "hyperbolic arcsine",
+    "hyperbolic arccosine",
+    "hyperbolic arctangent",
+    "radian conversion",
+    "degree conversion",
+)
+
 
 def normalize_calculation(calc):
     normalized = " ".join(calc.strip().lower().split())
     return CALCULATION_ALIASES.get(normalized, normalized)
 
 
+def show_all_functions():
+    print("\nCALCAPP can perform these calculations:")
+    for function in CALCAPP_FUNCTIONS:
+        print(f"- {function.capitalize()}")
+
+
 def math_mentor_ai():
     print("\nHello! I am Math Mentor AI, your personal assistant for CALCAPP.")
     print("I can help you understand the available calculations and guide you through using this app.")
-    print("Here are some things I can do for you:")
-    print("1. Explain what each calculation does.")
-    print("2. Provide examples of inputs for calculations.")
-    print("3. Help you choose the right calculation for your needs.")
-    print("4. Answer general math-related questions.")
+    print("You can show all calculator functions, get an explanation, or see an example input.")
 
     while True:
         print("\nWhat would you like help with?")
-        print("1. Explain a calculation")
-        print("2. Show an example input")
-        print("3. Exit Math Mentor AI")
-        choice = input("Enter your choice (1/2/3): ")
+        print("1. Show all Functions of the calculator")
+        print("2. Explain a calculation")
+        print("3. Show an example input")
+        print("4. Exit Math Mentor AI")
+        choice = input("Enter your choice (1/2/3/4): ")
 
         if choice == '1':
+            show_all_functions()
+        elif choice == '2':
             calc = input("Which calculation would you like me to explain? ").lower()
             explain_calculation(calc)
-        elif choice == '2':
+        elif choice == '3':
             calc = input("Which calculation would you like an example for? ").lower()
             example_input(calc)
-        elif choice == '3':
+        elif choice == '4':
             print("Goodbye! If you need help again, just call me.")
             break
         else:
