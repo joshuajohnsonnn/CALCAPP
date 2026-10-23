@@ -2,6 +2,7 @@
 ## THANK YOU FOR YOUR UNDERSTANDING. ##
 
 import math
+from time import sleep
 
 CALCULATION_ALIASES = {
     "add": "addition",
@@ -79,19 +80,25 @@ def math_mentor_ai():
     while True:
         print("\nWhat would you like help with?")
         print("1. Show all Functions of the calculator")
+        print("--------------------------------")
         print("2. Explain a calculation")
+        print("--------------------------------")
         print("3. Show an example input")
+        print("--------------------------------")
         print("4. Exit Math Mentor AI")
         choice = input("Enter your choice (1/2/3/4): ")
 
         if choice == '1':
             show_all_functions()
+            sleep(3.5)  # Pause for a moment to let the user read the list
         elif choice == '2':
             calc = input("Which calculation would you like me to explain? ").lower()
             explain_calculation(calc)
+            sleep(5)
         elif choice == '3':
             calc = input("Which calculation would you like an example for? ").lower()
             example_input(calc)
+            sleep(5) 
         elif choice == '4':
             print("Goodbye! If you need help again, just call me.")
             break
