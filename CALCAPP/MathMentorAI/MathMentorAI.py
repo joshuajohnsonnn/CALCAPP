@@ -107,8 +107,12 @@ def math_mentor_ai():
 
 def explain_calculation(calc):
     calc = normalize_calculation(calc)
-    import CALCAPP.MathMentorAI.MMAIexplanation as mmaiexplanation
-    explanations = mmaiexplanation.explanations
+    try:
+        from .MMAIexplanation import explanations
+    except ImportError:
+        import MMAIexplanation as mmaiexplanation
+        explanations = mmaiexplanation.explanations
+
     if calc in explanations:
         print(f"{calc.capitalize()}: {explanations[calc]}")
     else:
@@ -117,11 +121,17 @@ def explain_calculation(calc):
 
 def example_input(calc):
     calc = normalize_calculation(calc)
-    import CALCAPP.MathMentorAI.MMAIexamples as mmaiexamples
-    examples = mmaiexamples.examples
+    try:
+        from .MMAIexamples import examples
+    except ImportError:
+        import MMAIexamples as mmaiexamples
+        examples = mmaiexamples.examples
+
     if calc in examples:
         print(f"{calc.capitalize()} Example: {examples[calc]}")
     else:
         print("Sorry, I don't have an example for that calculation.")
-    
-math_mentor_ai()
+
+
+if __name__ == "__main__":
+    math_mentor_ai()
